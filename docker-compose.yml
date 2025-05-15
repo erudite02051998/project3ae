@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: "project3ae"
+      MYSQL_USER: "app_user"
+      MYSQL_PASSWORD: "secure_password"
+    command: --port=3306  # Đảm bảo MySQL chạy đúng cổng
+    ports:
+      - "3306:3306"
+    networks:
+      - app_network
+
+  my-app:
+    build: .
+    container_name: my_app
+    depends_on:
+      - mysql
+    ports:
+      - "8081:8081"
+    networks:
+      - app_network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/project3ae
+      SPRING_DATASOURCE_USERNAME: "app_user"
+      SPRING_DATASOURCE_PASSWORD: "secure_password"
+
+networks:
+  app_network:
+    driver: bridge
