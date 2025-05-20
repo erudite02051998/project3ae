@@ -14,7 +14,6 @@ com\aeCoder\project3ae\service\ProjectService.class
 com\aeCoder\project3ae\entity\IdSequence.class
 com\aeCoder\project3ae\Project3aeApplication.class
 com\aeCoder\project3ae\service\CommentService.class
-com\aeCoder\project3ae\service\VirusScanService.class
 com\aeCoder\project3ae\repository\ProjectRepository.class
 com\aeCoder\project3ae\repository\RatingRepository.class
 com\aeCoder\project3ae\service\IdGeneratorService.class
