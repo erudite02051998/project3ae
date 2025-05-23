@@ -16,6 +16,7 @@ public class Project {
     private String createdAt; 	//Ngày tạo
     private String userId; 		//ID người tạo dự án
     private String projectPath; //Đường dẫn lưu thư mục project
+    private int downloadCount;	// Lượt tải
 
     public Project() {
 	}
