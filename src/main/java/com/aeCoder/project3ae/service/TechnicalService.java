@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.aeCoder.project3ae.entity.Category;
 import com.aeCoder.project3ae.entity.Technical;
 import com.aeCoder.project3ae.repository.TechnicalRepository;
 
