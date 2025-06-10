@@ -2,6 +2,7 @@ package com.aeCoder.project3ae.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,4 +51,19 @@ public class ProjectService {
 		project.setDownloadCount(project.getDownloadCount() + 1);
 		projectRepository.save(project);
 	}
+	
+	public List<ProjectDTO> getFilteredProjects(String tech, String field, String language) {
+        List<Project> projects = projectRepository.filterProjects(tech, field, language);
+        System.out.println("Projects found: " + projects.size());
+        System.out.println("tech: [" + tech + "]");
+        System.out.println("field: [" + field + "]");
+        System.out.println("language: [" + language + "]");
+        return projects.stream()
+            .map(project -> new ProjectDTO(
+                project,
+                categoryRepository.findByProjectId(project.getId()), 
+                technicalRepository.findByProjectId(project.getId())
+            ))
+            .collect(Collectors.toList());
+    }
 }

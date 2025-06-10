@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/project3ae-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose port ứng dụng Spring Boot chạy
-EXPOSE 8081
+EXPOSE 8080
 
 # Chạy ứng dụng khi container khởi động
 ENTRYPOINT ["java", "-jar", "app.jar"]

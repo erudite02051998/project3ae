@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.aeCoder.project3ae.entity.Category;
 import com.aeCoder.project3ae.entity.Technical;
 
 @Repository

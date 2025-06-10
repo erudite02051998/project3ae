@@ -9,6 +9,7 @@ com\aeCoder\project3ae\controller\ProjectController.class
 com\aeCoder\project3ae\service\TechnicalService.class
 com\aeCoder\project3ae\entity\Technical.class
 com\aeCoder\project3ae\entity\IdSequence.class
+com\aeCoder\project3ae\configuration\CorsConfig.class
 com\aeCoder\project3ae\repository\TechnicalRepository.class
 com\aeCoder\project3ae\controller\ProjectController$1.class
 com\aeCoder\project3ae\repository\ProjectRepository.class
